@@ -9,30 +9,126 @@
 </head>
 <body>
     <header>
-        <a href="#home">
+        <a href="" id="bannerLink">
             <div class="banner">
                 <div class="backgroundimage"></div>
                 <div class="banner-text">nothing knows</div>
             </div>
         </a>
-        <nav class="customNav">
+        <nav>
             <ol>
-                <li><a href="#" class="hvr-bubble-float-top">Project 1</a></li>
-                <li><a href="#" class="hvr-bubble-float-top">Project 2</a></li>
-                <li><a href="#" class="hvr-bubble-float-top">Project 3</a></li>
-                <li><a href="#" class="hvr-bubble-float-top">Project 4</a></li>
+                <li><a href="#p1" class="hvr-bubble-float-top">Project 1</a></li>
+                <li><a href="#p2" class="hvr-bubble-float-top">Project 2</a></li>
+                <li><a href="#p3" class="hvr-bubble-float-top">Project 3</a></li>
+                <li><a href="#p4" class="hvr-bubble-float-top">Project 4</a></li>
             </ol>
         </nav>
     </header>
-    <main>
-        <div>
+    <main class="main-container">
+        <div id="landing-page" class="landing-page">
             <div class="landing-text">
                 Machines Learning About Identification, Connection, and Science. 
-            <br>
-            <br>
+                <br>
+                <br>
                 Coming Soon.
             </div>
         </div>
-        </main>
+        <div id="p1" class="content">
+            <h2>Section 1</h2>
+            <p>This is the content for Section 1.</p>
+        </div>
+        <div id="p2" class="content">
+            <h2>Section 2</h2>
+            <p>This is the content for Section 2.</p>
+        </div>
+        <div id="p3" class="content">
+            <h2>Section 3</h2>
+            <p>This is the content for Section 3.</p>
+        </div>
+    </main>
+    <script>
+        // Get all navigation links
+        const navLinks = document.querySelectorAll(".hvr-bubble-float-top");
+       
+        // Get the banner link
+        const bannerLink = document.getElementById("bannerLink");
+
+        // Get the landing page and all content divs
+        const landingPage = document.getElementById("landing-page");
+        const contentDivs = document.querySelectorAll(".content");
+
+        // Function to hide all 'content' divs 
+        function hideAllContentDivs() {
+            // Hide all content divs
+            contentDivs.forEach((div) => {
+                div.style.display = "none";
+            });
+        }
+
+        // Function to remove the 'active' class from all links
+        function removeActiveClass() {
+            navLinks.forEach((navLink) => {
+                navLink.classList.remove("active");
+            });
+        }  
+        
+        // Add click event listeners to the navigation links
+        navLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent the link from navigating
+
+        // ** Javascript for hiding landing page when NavLink is clicked**
+                // Hide the landing text
+                landingPage.style.display = "none";
+
+                // Hide all content divs if any are visible
+                if (contentDivs) {
+                    hideAllContentDivs();
+                }
+
+                // Show the corresponding content div
+                const targetId = link.getAttribute("href").substring(1);
+                const targetContent = document.getElementById(targetId);
+                targetContent.style.display = "block";
+
+    
+        // ** Javascript for navigation links styling **
+                // Check if the clicked link already has the 'active' class
+                if (!link.classList.contains("active")) {
+                    // If it doesn't, remove the 'active' class from all links
+                    removeActiveClass();
+                    
+                    // Add the 'active' class to the clicked link
+                    link.classList.add("active");
+                }
+                
+                // Update the hash in the URL to match the link's href
+                window.location.hash = link.getAttribute("href");
+            });
+
+        // Add click event listener to the banner link
+            bannerLink.addEventListener("click", (event) => {
+                // Prevent the link from navigating
+                event.preventDefault();
+            // ** Javascript for showing landing page when NavLink is clicked**
+                // hide all content divs if any are visible
+                if (contentDivs) {
+                    hideAllContentDivs();
+                }
+                // Show the landing text
+                landingPage.style.display = "block";
+
+            // ** Javascript for navigation links styling **
+                // Delay the removal of 'active' class from links
+                setTimeout(() => {
+                    // Remove the 'active' class from all links
+                    removeActiveClass();
+                }, 1);
+
+                // Update the hash in the URL to match the link's href
+                window.location.hash = link.getAttribute("href");
+            });
+        });
+    </script>
 </body>
 </html>

@@ -22,7 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    text-decoration: none; /* Remove underlines from links */
+  text-decoration: none; /* Remove underlines from links */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -65,21 +65,55 @@ table {
     font-weight: normal;
   }
 
-  @font-face {
-    font-family: 'OpenSans';
-    src: url('fonts/Open_Sans/static/OpenSans-Bold.ttf') format('truetype');
-    /* Include additional font formats if available */
-    font-style: normal;
-    font-weight: bold;
-  }
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/Open_Sans/static/OpenSans-Bold.ttf') format('truetype');
+  /* Include additional font formats if available */
+  font-style: normal;
+  font-weight: bold;
+}
+
+.wrapper-main {
+  width: 100%;
+  padding: 100%;
+  margin: 0 auto;
+}
 
 /* Style for the banner container */
 .banner {
     background-color: #ffffff; /* Background color of the banner */
-    padding: 5vw;
     position: relative; /* Position relative for absolute positioning */
     text-decoration: none; /* Remove underlines from links */
+    padding: 0;
+    container-name: banner;
+    container-type: inline-size;
 }
+
+/* Style for the background text */
+.banner-text {
+  color: #333238; /* Text color */
+  font-family: 'Major_Mono_Display';
+  font-size: 14.3rem;
+  letter-spacing:-0.4rem;
+  word-spacing: -5rem;
+  transform-origin: left bottom;
+  position: relative; /* Position absolutely within the banner */
+  padding: 0;
+  top: 0; /* Place it at the top of the banner */
+  left: 0; /* Place it at the left of the banner */
+  width: 100%; /* Expand the text width to match the banner width */
+  height: 100%; /* Expand the text height to match the banner height */
+  display: flex; /* Use flexbox for vertical and horizontal centering */
+  justify-content: flex-start; /* Center horizontally */
+  user-select: none;
+  pointer-events: none; /* Disable pointer events on this element */
+}
+
+/* @container banner (max-width: 512px) {
+  .banner-text {
+
+  }
+}  */
 
 .backgroundimage {
     background-image: url('assets/white-waves.webp');
@@ -92,31 +126,10 @@ table {
     left: 0;
 }
 
-/* Style for the background text */
-.banner-text {
-    color: #333238; /* Text color */
-    font-family: 'Major_Mono_Display';
-    font-size: 11vw;
-    letter-spacing: -0.17vw;
-    word-spacing: -4vw;
-    transform: scale(1.0, 1.10);
-    transform-origin: left bottom;
-    position: absolute; /* Position absolutely within the banner */
-    top: 0; /* Place it at the top of the banner */
-    left: 0; /* Place it at the left of the banner */
-    width: 100%; /* Expand the text width to match the banner width */
-    height: 100%; /* Expand the text height to match the banner height */
-    display: flex; /* Use flexbox for vertical and horizontal centering */
-    align-items: center; /* Center vertically */
-    justify-content: flex-start; /* Center horizontally */
-    user-select: none;
-    pointer-events: none; /* Disable pointer events on this element */
-    box-sizing: border-box; /* Include padding and border in element's width and height */
-}
-
 /* Style for the navigation bar */
 nav {
     display:flex;
+    position: relative;
     background-color:#CCCCCC; /* Background color of the navbar */
     padding: 0.75rem 0; /* Add padding to create space around the links */
     user-select: none
@@ -150,53 +163,87 @@ nav a {
     user-select: none;
 }
 
-/* Add hover effect */
-nav a:hover, 
-nav a:active {
-    background-color: #497762; /* Change the background color on hover to #49876d*/
-    color: #ffffff; /* Link text color */
-    border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
-
-}
-
-/* Bubble Float Top */
+/* Bubble Float Top Animation */
 .hvr-bubble-float-top {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
   }
-  .hvr-bubble-float-top:hover, 
-  .hvr-bubble-float-top:focus, 
-  .hvr-bubble-float-top:active {
+  .hvr-bubble-float-top:hover {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+    background-color: #333238; /* Change the background color on hover to #49876d*/
+    color: #ffffff; /* Link text color */
+    border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
+  }
+
+  .hvr-bubble-float-top:hover:before {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    background-color: #333238; /* Change the background color on hover to #49876d*/
+    color: #ffffff; /* Link text color */
+    border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
+  }
+
+  .hvr-bubble-float-top.active {
     -webkit-transform: translateY(12px);
     transform: translateY(12px);
     background-color: #497762; /* Change the background color on hover to #49876d*/
     color: #ffffff; /* Link text color */
     border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
   }
-  .hvr-bubble-float-top:hover:before, 
-  .hvr-bubble-float-top:focus:before, 
-  .hvr-bubble-float-top:active:before {
+
+  .hvr-bubble-float-top.active:before {
     -webkit-transform: translateY(-12px);
     transform: translateY(-12px);
+    background-color: #497762; /* Change the background color on hover to #49876d*/
+    color: #ffffff; /* Link text color */
+    border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
   }
 
+.content {
+  display: none;
+}
+
+.content:target {
+  display: block;
+}
+
+/* Style for the main container */
+.main-container {
+  margin-top: 20px; /* Add some top margin to create separation */
+  padding: 20px; /* Add padding to give content some breathing room */
+  background-color: #ffffff; /* Add a background color if needed */
+  /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  Add a subtle shadow for depth */
+}
 
 /* Style for the front page text */
+.landing-page {
+  display: block; /* Initially show the landing page */
+}
+
+.content {
+  display: none; /* Initially hide all content */
+}
+
 .landing-text {
     font-family: 'OpenSans';
     font-size: 2rem; /* Adjust the font size as needed */
+    transform: scale(1.0, 1.10);
     display: flex;
     position: relative; /* Add position: relative to make z-index work */
     justify-content: center;
     padding-top: 10rem;
     margin-left: 1.5rem;
     user-select: none;
+}
+
+@media {
+
 }
