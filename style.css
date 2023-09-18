@@ -144,7 +144,7 @@ nav ol {
 }
 
 nav li {
-    margin-left: 1.7rem; /* Add spacing between list items */
+    margin-left: 1rem; /* Add spacing between list items */
 }
 
 /* Style for the navigation links */
@@ -155,11 +155,10 @@ nav a {
     color: #333238; /* Link text color */
     font-family: 'OpenSans';
     font-weight: bold;
-    font-size: 2rem; /* Adjust the font size as needed */
+    font-size: 1.5rem; /* Adjust the font size as needed */
     padding: 0.5rem 1rem; /* Add padding to create the clickable area */
     border-radius: 10px; /* Add rounded corners for a box effect */
     border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
-    transition: background-color 0.3s; /* Add a smooth transition for the background color */
     user-select: none;
 }
 
@@ -174,38 +173,39 @@ nav a {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
-  }
-  .hvr-bubble-float-top:hover {
-    -webkit-transform: translateY(12px);
-    transform: translateY(12px);
-    background-color: #333238; /* Change the background color on hover to #49876d*/
-    color: #ffffff; /* Link text color */
-    border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
-  }
+}
+  
+.hvr-bubble-float-top:hover {
+  -webkit-transform: translateY(12px);
+  transform: translateY(12px);
+  background-color: #333238; /* Change the background color on hover to #49876d*/
+  color: #ffffff; /* Link text color */
+  border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
+}
 
-  .hvr-bubble-float-top:hover:before {
-    -webkit-transform: translateY(-12px);
-    transform: translateY(-12px);
-    background-color: #333238; /* Change the background color on hover to #49876d*/
-    color: #ffffff; /* Link text color */
-    border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
-  }
+.hvr-bubble-float-top:hover:before {
+  -webkit-transform: translateY(-12px);
+  transform: translateY(-12px);
+  background-color: #333238; /* Change the background color on hover to #49876d*/
+  color: #ffffff; /* Link text color */
+  border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
+}
 
-  .hvr-bubble-float-top.active {
-    -webkit-transform: translateY(12px);
-    transform: translateY(12px);
-    background-color: #497762; /* Change the background color on hover to #49876d*/
-    color: #ffffff; /* Link text color */
-    border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
-  }
+.hvr-bubble-float-top.active {
+  -webkit-transform: translateY(12px);
+  transform: translateY(12px);
+  background-color: #497762; /* Change the background color on hover to #49876d*/
+  color: #ffffff; /* Link text color */
+  border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
+}
 
-  .hvr-bubble-float-top.active:before {
-    -webkit-transform: translateY(-12px);
-    transform: translateY(-12px);
-    background-color: #497762; /* Change the background color on hover to #49876d*/
-    color: #ffffff; /* Link text color */
-    border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
-  }
+.hvr-bubble-float-top.active:before {
+  -webkit-transform: translateY(-12px);
+  transform: translateY(-12px);
+  background-color: #497762; /* Change the background color on hover to #49876d*/
+  color: #ffffff; /* Link text color */
+  border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
+}
 
 .content {
   display: none;
@@ -217,18 +217,18 @@ nav a {
 
 /* Style for the main container */
 .main-container {
-  margin-top: 20px; /* Add some top margin to create separation */
-  padding: 20px; /* Add padding to give content some breathing room */
-  background-color: #ffffff; /* Add a background color if needed */
-  /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  Add a subtle shadow for depth */
+    margin-top: 20px; /* Add some top margin to create separation */
+    padding: 20px; /* Add padding to give content some breathing room */
+    background-color: #ffffff; /* Add a background color if needed */
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  Add a subtle shadow for depth */
 }
 
 /* Style for the front page text */
 .landing-page {
-  display: block; /* Initially show the landing page */
-  position: relative; /* Add position: relative to make z-index work */
-  padding-top: 10rem;
-  margin-left: 1.5rem;
+    display: block; /* Initially show the landing page */
+    position: relative; /* Add position: relative to make z-index work */
+    padding-top: 10rem;
+    margin-left: 1.5rem;
 }
 
 .landing-text {
@@ -242,17 +242,17 @@ nav a {
 }
 
 .content {
-  display: none; /* Initially hide all content */
-  position: relative; /* Add position: relative to make z-index work */
-  padding-top: 10rem;
-  margin-left: 1.5rem;
+    display: none; /* Initially hide all content */
+    position: relative; /* Add position: relative to make z-index work */
+    padding-top: 10rem;
+    margin-left: 1.5rem;
 }
 
 .content-text {
-  font-family: 'OpenSans';
-  font-size: 2rem; /* Adjust the font size as needed */
-  transform: scale(1.0, 1.10);
-  display: flex;
-  justify-content: center;
-  user-select: none;
+    font-family: 'OpenSans';
+    font-size: 2rem; /* Adjust the font size as needed */
+    transform: scale(1.0, 1.10);
+    display: flex;
+    justify-content: center;
+    user-select: none;
 }
