@@ -226,10 +226,9 @@ nav a {
 /* Style for the front page text */
 .landing-page {
   display: block; /* Initially show the landing page */
-}
-
-.content {
-  display: none; /* Initially hide all content */
+  position: relative; /* Add position: relative to make z-index work */
+  padding-top: 10rem;
+  margin-left: 1.5rem;
 }
 
 .landing-text {
@@ -237,13 +236,23 @@ nav a {
     font-size: 2rem; /* Adjust the font size as needed */
     transform: scale(1.0, 1.10);
     display: flex;
-    position: relative; /* Add position: relative to make z-index work */
     justify-content: center;
-    padding-top: 10rem;
-    margin-left: 1.5rem;
+    margin-bottom: 20px; /* Add margin to create spacing between elements */
     user-select: none;
 }
 
-@media {
+.content {
+  display: none; /* Initially hide all content */
+  position: relative; /* Add position: relative to make z-index work */
+  padding-top: 10rem;
+  margin-left: 1.5rem;
+}
 
+.content-text {
+  font-family: 'OpenSans';
+  font-size: 2rem; /* Adjust the font size as needed */
+  transform: scale(1.0, 1.10);
+  display: flex;
+  justify-content: center;
+  user-select: none;
 }
