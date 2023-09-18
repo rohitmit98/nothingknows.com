@@ -93,9 +93,9 @@ table {
 .banner-text {
   color: #333238; /* Text color */
   font-family: 'Major_Mono_Display';
-  font-size: 14.3rem;
-  letter-spacing:-0.4rem;
-  word-spacing: -5rem;
+  font-size: calc(11vw);
+  letter-spacing:calc(-.1vw);
+  word-spacing: calc(-5vw);
   transform-origin: left bottom;
   position: relative; /* Position absolutely within the banner */
   padding: 0;
