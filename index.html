@@ -1,168 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Include your stylesheets, including dark mode styles -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <title>Nothing Knows Landing</title>
-</head>
-<body>
-    <header>
-        <a href="#" id="bannerLink">
-            <div class="banner">
-                <div class="backgroundimage"></div>
-                <div class="banner-text">nothing knows</div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nothing Knows Landing Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="#" id="bannerLink">
+                <div class="banner">
+                    <div class="backgroundimage"></div>
+                    <div class="banner-text">nothing knows</div>
+                </div>
+            </a>
+            <nav>
+                <ol>
+                    <li><a href="#p1" class="hvr-bubble-float-top">Project 1</a></li>
+                    <li><a href="#p2" class="hvr-bubble-float-top">Project 2</a></li>
+                    <li><a href="#p3" class="hvr-bubble-float-top">Project 3</a></li>
+                    <li><a href="#p4" class="hvr-bubble-float-top">Project 4</a></li>
+                </ol>
+            </nav>
+        </header>
+        <main class="main-container">
+            <div id="landing-page" class="content-container">
+                <h1 class="heading">Machines Learning About Identification, Connection, and Science</h1>
+                <p class="paragraph">Coming Soon.</p>
             </div>
-        </a>
-        <nav>
-            <ol>
-                <li><a href="#p1" class="hvr-bubble-float-top">Project 1</a></li>
-                <li><a href="#p2" class="hvr-bubble-float-top">Project 2</a></li>
-                <li><a href="#p3" class="hvr-bubble-float-top">Project 3</a></li>
-                <li><a href="#p4" class="hvr-bubble-float-top">Project 4</a></li>
-            </ol>
-        </nav>
-    </header>
-    <main class="main-container">
-        <div id="landing-page" class="landing-page">
-            <h1 class="landing-text">Machines Learning About Identification, Connection, and Science</h1>
-            <p class="landing-text">Coming Soon.</p>
-        </div>
-        <div id="p1" class="content">
-            <h1 class="landing-text">Project 1</h1>
-            <p class="landing-text">This is the content for Project 1.</p>
-        </div>
-        <div id="p2" class="content">
-            <h1 class="landing-text">Project 2</h1>
-            <p class="landing-text">This is the content for Section 2.</p>
-        </div>
-        <div id="p3" class="content">
-            <h1 class="landing-text">Project 3</h1>
-            <p class="landing-text">This is the content for Section 3.</p>
-        </div>
-        <div id="p4" class="content">
-            <h1 class="landing-text">Project 4</h1>
-            <p class="landing-text">This is the content for Section 4.</p>
-        </div>
-    </main>
-    <script>
-        // Get all navigation links
-        const navLinks = document.querySelectorAll(".hvr-bubble-float-top");
-        // Get the banner link
-        const bannerLink = document.getElementById("bannerLink");
-        // Get the landing page and all content divs
-        const landingPage = document.getElementById("landing-page");
-        const contentDivs = document.querySelectorAll(".content");
+            <div id="p1" class="content-container">
+                <h1 class="heading">Project 1</h1>
+                <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+            </div>
+            <div id="p2" class="content-container">
+                <h1 class="heading">Project 2</h1>
+                <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+            <div id="p3" class="content-container">
+                <h1 class="heading">Project 3</h1>
+                <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+            <div id="p4" class="content-container">
+                <h1 class="heading">Project 4</h1>
+                <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </main>
+        <script>
+            // Get all navigation links
+            const navLinks = document.querySelectorAll(".hvr-bubble-float-top");
+            // Get the banner link
+            const bannerLink = document.getElementById("bannerLink");
+            // Get the landing page and all content divs
+            const landingPage = document.getElementById("landing-page");
+            const contentDivs = document.querySelectorAll(".content-container");
 
-        // Initial execution of the function to handle the hash when the page loads
-        showContentByHash();
+            // Initial execution of the function to handle the hash when the page loads
+            showContentByHash();
 
-        // Function to hide all 'content' divs 
-        function hideAllContentDivs() {
-            // Hide all content divs
-            contentDivs.forEach((div) => {
-                div.style.display = "none";
-            });
-        }
-        // Function to remove the 'active' class from all links
-        function removeActiveClass() {
-            navLinks.forEach((navLink) => {
-                navLink.classList.remove("active");
-            });
-        }  
-         // Function to show content based on the hash in the URL
-         function showContentByHash() {
-            const hash = window.location.hash; // Get the current hash
-            
-            // Check if the hash is empty or corresponds to the landing page
-            if (hash === "" || hash === "#landing-page") {
-                // Show the landing text
-                landingPage.style.display = "block";
-            } else {
-                // Hide the landing text
-                landingPage.style.display = "none";
-                
+            // Function to hide all 'content' divs 
+            function hideAllContentDivs() {
                 // Hide all content divs
-                hideAllContentDivs();
-
-                // Show the corresponding content div based on the hash
-                const targetId = hash.substring(1); // Remove the '#' symbol
-                const targetContent = document.getElementById(targetId);
+                contentDivs.forEach((div) => {
+                    div.style.display = "none";
+                });
+            }
+            // Function to remove the 'active' class from all links
+            function removeActiveClass() {
+                navLinks.forEach((navLink) => {
+                    navLink.classList.remove("active");
+                });
+            }  
+            // Function to show content based on the hash in the URL
+            function showContentByHash() {
+                const hash = window.location.hash; // Get the current hash
                 
-                if (targetContent) {
-                    targetContent.style.display = "block";
+                // Check if the hash is empty or corresponds to the landing page
+                if (hash === "" || hash === "#landing-page") {
+                    // Show the landing text
+                    landingPage.style.display = "block";
+                } else {
+                    // Hide the landing text
+                    landingPage.style.display = "none";
+                    
+                    // Hide all content divs
+                    hideAllContentDivs();
+
+                    // Show the corresponding content div based on the hash
+                    const targetId = hash.substring(1); // Remove the '#' symbol
+                    const targetContent = document.getElementById(targetId);
+                    
+                    if (targetContent) {
+                        targetContent.style.display = "block";
+                    }
                 }
+
+                // Update the 'active' class based on the hash
+                navLinks.forEach((link) => {
+                    if (link.getAttribute("href") === hash) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
             }
 
-            // Update the 'active' class based on the hash
+            // Add an event listener to handle hash changes (e.g., when navigating directly)
+            window.addEventListener("hashchange", showContentByHash);
+            
+            // Add click event listeners to the navigation links
             navLinks.forEach((link) => {
-                if (link.getAttribute("href") === hash) {
-                    link.classList.add("active");
-                } else {
-                    link.classList.remove("active");
-                }
-            });
-        }
+                link.addEventListener("click", (event) => {
+                    event.preventDefault(); // Prevent the link from navigating
 
-        // Add an event listener to handle hash changes (e.g., when navigating directly)
-        window.addEventListener("hashchange", showContentByHash);
+            // ** Javascript for hiding landing page when NavLink is clicked**
+                    // Hide the landing text
+                    landingPage.style.display = "none";
+
+                    // Hide all content divs if any are visible
+                    if (contentDivs) {
+                        hideAllContentDivs();
+                    }
+
+                    // Show the corresponding content div
+                    const targetId = link.getAttribute("href").substring(1);
+                    const targetContent = document.getElementById(targetId);
+                    targetContent.style.display = "block";
+
         
-        // Add click event listeners to the navigation links
-        navLinks.forEach((link) => {
-            link.addEventListener("click", (event) => {
-                event.preventDefault(); // Prevent the link from navigating
-
-        // ** Javascript for hiding landing page when NavLink is clicked**
-                // Hide the landing text
-                landingPage.style.display = "none";
-
-                // Hide all content divs if any are visible
+            // ** Javascript for navigation links styling **
+                    // Check if the clicked link already has the 'active' class
+                    if (!link.classList.contains("active")) {
+                        // If it doesn't, remove the 'active' class from all links
+                        removeActiveClass();
+                        
+                        // Add the 'active' class to the clicked link
+                        link.classList.add("active");
+                    }
+                    
+                    // Update the hash in the URL to match the link's href
+                    window.location.hash = link.getAttribute("href");
+                });
+            });
+            
+            // Add click event listener to the banner link
+            bannerLink.addEventListener("click", (event) => {
+            // ** Javascript for showing landing page when NavLink is clicked**
+                // hide all content divs if any are visible
                 if (contentDivs) {
                     hideAllContentDivs();
                 }
+                // Show the landing text
+                landingPage.style.display = "block";
 
-                // Show the corresponding content div
-                const targetId = link.getAttribute("href").substring(1);
-                const targetContent = document.getElementById(targetId);
-                targetContent.style.display = "block";
-
-    
-        // ** Javascript for navigation links styling **
-                // Check if the clicked link already has the 'active' class
-                if (!link.classList.contains("active")) {
-                    // If it doesn't, remove the 'active' class from all links
+            // ** Javascript for navigation links styling **
+                // Delay the removal of 'active' class from links
+                setTimeout(() => {
+                    // Remove the 'active' class from all links
                     removeActiveClass();
-                    
-                    // Add the 'active' class to the clicked link
-                    link.classList.add("active");
-                }
-                
+                }, 1);
+
                 // Update the hash in the URL to match the link's href
                 window.location.hash = link.getAttribute("href");
             });
-        });
-        
-        // Add click event listener to the banner link
-        bannerLink.addEventListener("click", (event) => {
-        // ** Javascript for showing landing page when NavLink is clicked**
-            // hide all content divs if any are visible
-            if (contentDivs) {
-                hideAllContentDivs();
-            }
-            // Show the landing text
-            landingPage.style.display = "block";
-
-        // ** Javascript for navigation links styling **
-            // Delay the removal of 'active' class from links
-            setTimeout(() => {
-                // Remove the 'active' class from all links
-                removeActiveClass();
-            }, 1);
-
-            // Update the hash in the URL to match the link's href
-            window.location.hash = link.getAttribute("href");
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>

@@ -130,7 +130,7 @@ table {
 nav {
     display:flex;
     position: relative;
-    background-color:#CCCCCC; /* Background color of the navbar */
+    background-color:#f1f1f1; /* Background color of the navbar */
     padding: 0.75rem 0; /* Add padding to create space around the links */
     user-select: none
 }
@@ -151,12 +151,12 @@ nav li {
 nav a {
     display: inline-block;
     text-decoration: none; /* Remove underlines from links */
-    background-color: #CCCCCC ; /* Background color for all links */
+    background-color: #f1f1f1 ; /* Background color for all links */
     color: #333238; /* Link text color */
     font-family: 'OpenSans';
     font-weight: bold;
-    font-size: 1.5rem; /* Adjust the font size as needed */
-    padding: 0.5rem 1rem; /* Add padding to create the clickable area */
+    font-size: 1rem; /* Adjust the font size as needed */
+    padding: 0.3rem .3rem; /* Add padding to create the clickable area */
     border-radius: 10px; /* Add rounded corners for a box effect */
     border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
     user-select: none;
@@ -224,16 +224,19 @@ nav a {
 }
 
 /* Style for the front page text */
-.landing-page {
-    display: block; /* Initially show the landing page */
-    position: relative; /* Add position: relative to make z-index work */
-    padding-top: 10rem;
-    margin-left: 1.5rem;
+.content-container {
+  display: none; /* This is not necessary, as block is the default display value for div elements */
+  padding: 1rem; /* Increase padding for better spacing */
+  margin: 1rem; /* Increase margin for better spacing and separation from other elements */
+  background-color: #f1f1f1; /* Add a background color for visual separation */
+  border-radius: 10px; /* Add rounded corners for a modern look */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  transition: background-color 0.3s ease; /* Add a smooth transition for background color changes */
 }
 
-.landing-text {
+.heading {
     font-family: 'OpenSans';
-    font-size: 2rem; /* Adjust the font size as needed */
+    font-size: 1.25rem; /* Adjust the font size as needed */
     transform: scale(1.0, 1.10);
     display: flex;
     justify-content: center;
@@ -241,18 +244,12 @@ nav a {
     user-select: none;
 }
 
-.content {
-    display: none; /* Initially hide all content */
-    position: relative; /* Add position: relative to make z-index work */
-    padding-top: 10rem;
-    margin-left: 1.5rem;
-}
-
-.content-text {
-    font-family: 'OpenSans';
-    font-size: 2rem; /* Adjust the font size as needed */
-    transform: scale(1.0, 1.10);
-    display: flex;
-    justify-content: center;
-    user-select: none;
+.paragraph {
+  font-family: 'OpenSans';
+  font-size: 1rem; /* Adjust the font size as needed */
+  transform: scale(1.0, 1.10);
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px; /* Add margin to create spacing between elements */
+  user-select: none;
 }
