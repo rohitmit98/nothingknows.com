@@ -122,13 +122,19 @@
                         hideAllContentDivs();
                     }
 
-                    // Show the corresponding content div
+                    // Get the target ID from the link's href
                     const targetId = link.getAttribute("href").substring(1);
                     const targetContent = document.getElementById(targetId);
                     targetContent.style.display = "block";
 
+                    // Scroll to the target content smoothly
+                    if (targetContent) {
+                        targetContent.scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }
         
-            // ** Javascript for navigation links styling **
+                    // ** Javascript for navigation links styling **
                     // Check if the clicked link already has the 'active' class
                     if (!link.classList.contains("active")) {
                         // If it doesn't, remove the 'active' class from all links
