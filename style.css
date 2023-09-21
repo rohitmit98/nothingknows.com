@@ -174,13 +174,14 @@ nav a {
     -webkit-transition-property: transform;
     transition-property: transform;
 }
-  
-.hvr-bubble-float-top:hover {
-  -webkit-transform: translateY(12px);
-  transform: translateY(12px);
-  background-color: #333238; /* Change the background color on hover to #49876d*/
-  color: #ffffff; /* Link text color */
-  border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
+@media (min-width:768px) {
+  .hvr-bubble-float-top:hover {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+    background-color: #333238; /* Change the background color on hover to #49876d*/
+    color: #ffffff; /* Link text color */
+    border: 2px solid #333238; /* Add a 2px solid outline using #333238 */
+  }
 }
 
 .hvr-bubble-float-top:hover:before {
