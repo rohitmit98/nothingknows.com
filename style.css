@@ -73,29 +73,21 @@ table {
   font-weight: bold;
 }
 
-.wrapper-main {
-  width: 100%;
-  padding: 100%;
-  margin: 0 auto;
-}
-
 /* Style for the banner container */
-.banner {
+.banner-container {
     background-color: #ffffff; /* Background color of the banner */
-    position: relative; /* Position relative for absolute positioning */
+    position: fixed;
+    top: 0;
     text-decoration: none; /* Remove underlines from links */
     padding: 0;
-    container-name: banner;
-    container-type: inline-size;
 }
 
 /* Style for the background text */
 .banner-text {
   color: #333238; /* Text color */
   font-family: 'Major_Mono_Display';
-  font-size: calc(11vw);
-  letter-spacing:calc(-.1vw);
-  word-spacing: calc(-5vw);
+  font-size: 2.5rem;
+  word-spacing: -1rem;
   transform-origin: left bottom;
   position: relative; /* Position absolutely within the banner */
   padding: 0;
@@ -104,21 +96,15 @@ table {
   width: 100%; /* Expand the text width to match the banner width */
   height: 100%; /* Expand the text height to match the banner height */
   display: flex; /* Use flexbox for vertical and horizontal centering */
-  justify-content: flex-start; /* Center horizontally */
+  justify-content: center; /* Center horizontally */
   user-select: none;
   pointer-events: none; /* Disable pointer events on this element */
 }
 
-/* @container banner (max-width: 512px) {
-  .banner-text {
-
-  }
-}  */
-
 .backgroundimage {
     background-image: url('assets/white-waves.webp');
     background-repeat: repeat;
-    background-size: 50%;
+    background-size: 200%; /*USE 50% for desktop*/
     width: 100%; /* Ensure the background image covers the entire container */
     height: 100%; /* Ensure the background image covers the entire container */
     position: absolute;
@@ -127,12 +113,13 @@ table {
 }
 
 /* Style for the navigation bar */
-nav {
-    display:flex;
-    position: relative;
-    background-color:#f1f1f1; /* Background color of the navbar */
-    padding: 0.75rem 0; /* Add padding to create space around the links */
-    user-select: none
+.navbar {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color:#f1f1f1; /* Background color of the navbar */
+  padding: 0.75rem 0; /* Add padding to create space around the links */
+  user-select: none;
 }
 
 /* Style for the navigation links */
@@ -144,7 +131,8 @@ nav ol {
 }
 
 nav li {
-    margin-left: 1rem; /* Add spacing between list items */
+    margin-left: 0.5rem; /* Add spacing between list items */
+    margin-right: 0.5rem; /* Add spacing between list items */
 }
 
 /* Style for the navigation links */
@@ -208,18 +196,10 @@ nav a {
   border: 2px solid #497762; /* Add a 2px solid outline using #333238 */
 }
 
-.content {
-  display: none;
-}
-
-.content:target {
-  display: block;
-}
-
 /* Style for the main container */
 .main-container {
-    margin-top: 20px; /* Add some top margin to create separation */
-    padding: 20px; /* Add padding to give content some breathing room */
+    margin-top: 7rem;
+    padding: 1rem; /* Add padding to give content some breathing room */
     background-color: #ffffff; /* Add a background color if needed */
     /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  Add a subtle shadow for depth */
 }
@@ -232,7 +212,6 @@ nav a {
   background-color: #f1f1f1; /* Add a background color for visual separation */
   border-radius: 10px; /* Add rounded corners for a modern look */
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
-  transition: background-color 0.3s ease; /* Add a smooth transition for background color changes */
 }
 
 .heading {

@@ -7,22 +7,22 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+    <div class="banner-container">
         <header>
             <a href="#" id="bannerLink">
-                <div class="banner">
                     <div class="backgroundimage"></div>
                     <div class="banner-text">nothing knows</div>
-                </div>
             </a>
-            <nav>
-                <ol>
-                    <li><a href="#p1" class="hvr-bubble-float-top">Project 1</a></li>
-                    <li><a href="#p2" class="hvr-bubble-float-top">Project 2</a></li>
-                    <li><a href="#p3" class="hvr-bubble-float-top">Project 3</a></li>
-                    <li><a href="#p4" class="hvr-bubble-float-top">Project 4</a></li>
-                </ol>
-            </nav>
         </header>
+        <nav class="navbar">
+            <ol>
+                <li><a href="#p1" class="hvr-bubble-float-top">Project 1</a></li>
+                <li><a href="#p2" class="hvr-bubble-float-top">Project 2</a></li>
+                <li><a href="#p3" class="hvr-bubble-float-top">Project 3</a></li>
+                <li><a href="#p4" class="hvr-bubble-float-top">Project 4</a></li>
+            </ol>
+        </nav>
+    </div>
         <main class="main-container">
             <div id="landing-page" class="content-container">
                 <h1 class="heading">Machines Learning About Identification, Connection, and Science</h1>
@@ -30,7 +30,7 @@
             </div>
             <div id="p1" class="content-container">
                 <h1 class="heading">Project 1</h1>
-                <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                <p class="paragraph">"Insert Text."
                 </p>
             </div>
             <div id="p2" class="content-container">
@@ -43,7 +43,7 @@
             </div>
             <div id="p4" class="content-container">
                 <h1 class="heading">Project 4</h1>
-                <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "</p>
             </div>
         </main>
         <script>
@@ -126,13 +126,6 @@
                     const targetId = link.getAttribute("href").substring(1);
                     const targetContent = document.getElementById(targetId);
                     targetContent.style.display = "block";
-
-                    // Scroll to the target content smoothly
-                    if (targetContent) {
-                        targetContent.scrollIntoView({
-                            behavior: "smooth"
-                        });
-                    }
         
                     // ** Javascript for navigation links styling **
                     // Check if the clicked link already has the 'active' class
@@ -169,7 +162,7 @@
                 }, 1);
 
                 // Update the hash in the URL to match the link's href
-                window.location.hash = link.getAttribute("href");
+                window.location.hash = ("");
             });
         </script>
     </body>
